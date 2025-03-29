@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@notionhq/client": "^2.3.0",
+    "dotenv": "^16.4.7",
+    "nodemailer": "^6.10.0"
+  },
+  "scripts": {
+    "start": "ts-node main.ts",
+    "deploy": "pkg dist/main.js --targets win --output ./executable/main.exe",
+    "dev": "node --watch main.ts",
+    "watch": "nodemon"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}

@@ -1,0 +1,373 @@
+[
+  {
+    "Nro Regla": 1,
+    "Nombre": "El formato de la base no coincide con el establecido",
+    "Base": "Requerimientos",
+    "Estado": "Todos los estados",
+    "Validación": "La lista de propiedades definidas para la base Requerimientos <> N° ID Estado Fecha de Recepción Origen Prioridad Responsable Etiquetas Tareas Archivos Adjuntos Fecha de Fin Fecha de Inicio Estado de avance Lead Time Cycle Time"
+  },
+  {
+    "Nro Regla": 2,
+    "Nombre": "El Requerimiento no cuenta con nombre",
+    "Base": "Requerimientos",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Nombre == “Nuevo Requerimiento || “"
+  },
+  {
+    "Nro Regla": 3,
+    "Nombre": "El Requerimiento no cuenta con Fecha de recepción",
+    "Base": "Requerimientos",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Fecha de recepción == null"
+  },
+  {
+    "Nro Regla": 4,
+    "Nombre": "El Requerimiento no cuenta con Origen",
+    "Base": "Requerimientos",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Origen == null"
+  },
+  {
+    "Nro Regla": 5,
+    "Nombre": "El Requerimiento no cuenta con Prioridad",
+    "Base": "Requerimientos",
+    "Estado": "Todos los estados a excepción de “Sin empezar",
+    "Validación": "La propiedad Prioridad == null"
+  },
+  {
+    "Nro Regla": 6,
+    "Nombre": "El Requerimiento no cuenta con Responsable",
+    "Base": "Requerimientos",
+    "Estado": "Todos los estados a excepción de “Sin empezar",
+    "Validación": "La propiedad Responsable == null"
+  },
+  {
+    "Nro Regla": 7,
+    "Nombre": "El Requerimiento no cuenta con Fecha de inicio",
+    "Base": "Requerimientos",
+    "Estado": "“en curso o “listo",
+    "Validación": "La propiedad Fecha de inicio == null"
+  },
+  {
+    "Nro Regla": 8,
+    "Nombre": "El Requerimiento esta en curso pero no cuenta con Tareas asignadas",
+    "Base": "Requerimientos",
+    "Estado": "“en análisis, “Aprobado, “en curso o “listo",
+    "Validación": "La propiedad Tareas == null"
+  },
+  {
+    "Nro Regla": 9,
+    "Nombre": "El Requerimiento está Completado pero no cuenta con fecha de fin",
+    "Base": "Requerimientos",
+    "Estado": "“Listo o “Cancelado",
+    "Validación": "La propiedad Fecha de fin == null"
+  },
+  {
+    "Nro Regla": 10,
+    "Nombre": "El formato de la base Publicación no coincide con el formato establecido",
+    "Base": "Publicación",
+    "Estado": "Todos los estados",
+    "Validación": "La lista de propiedades definidas para la base Publicaciones N° ID Cronograma Estado Asignado Prioridad Tags Summary IA Componente Fecha de Entrega Tareas"
+  },
+  {
+    "Nro Regla": 11,
+    "Nombre": "La Publicación no cuenta con Versión",
+    "Base": "Publicación",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Versión == “Publicación || “"
+  },
+  {
+    "Nro Regla": 12,
+    "Nombre": "La Publicación no cuenta con un Cronograma definido o valido",
+    "Base": "Publicación",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Cronograma == null || Cronograma.dateStart == null || Cronograma.dateEnd == null (validar que tenga el rango y no una única fecha)"
+  },
+  {
+    "Nro Regla": 13,
+    "Nombre": "La Publicación no cuenta con un colaborador Asignado",
+    "Base": "Publicación",
+    "Estado": "Todos los estados a excepción de “No iniciado",
+    "Validación": "La propiedad Asignado == null"
+  },
+  {
+    "Nro Regla": 14,
+    "Nombre": "La Publicación no cuenta con prioridad",
+    "Base": "Publicación",
+    "Estado": "Todos los estados a excepción de “No iniciado",
+    "Validación": "La propiedad Prioridad == null"
+  },
+  {
+    "Nro Regla": 15,
+    "Nombre": "La Publicación no cuenta con tareas asignadas",
+    "Base": "Publicación",
+    "Estado": "“Finalizado",
+    "Validación": "La propiedad Tareas == null"
+  },
+  {
+    "Nro Regla": 16,
+    "Nombre": "La Publicación no cuenta con Fecha de Entrega",
+    "Base": "Publicación",
+    "Estado": "“Finalizado",
+    "Validación": "La propiedad Fecha de Entrega == null"
+  },
+  {
+    "Nro Regla": 17,
+    "Nombre": "El formato de la base Sprints no coincide con el establecido",
+    "Base": "Sprints",
+    "Estado": "Todos los estados",
+    "Validación": "La lista de propiedades definidas para la base Sprints N° ID Fechas Tareas completadas Tareas Totales"
+  },
+  {
+    "Nro Regla": 18,
+    "Nombre": "El Sprint no cuenta con Fechas definidas o validas",
+    "Base": "Sprints",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Fechas == null || Fechas.dateStart == null || Fechas.dateEnd == null (validar que tenga el rango y no una única fecha)"
+  },
+  {
+    "Nro Regla": 19,
+    "Nombre": "El Sprint Completado tiene tareas pendientes asignadas",
+    "Base": "Sprints",
+    "Estado": "“Past o “Last",
+    "Validación": "Existen tareas que tienen asignado un Sprint Completado (en estado “Past o “Last) y su estado es <> “Completada o “Cancelada"
+  },
+  {
+    "Nro Regla": 20,
+    "Nombre": "El formato de la base Tareas no coincide con el formato establecido",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La lista de propiedades definidas para la base Tareas <> ID Fecha de Recepción Requerimiento Tarea principal Componente Tipo Estado Responsable Prioridad Esfuerzo Fecha Limite Etiquetas Epica Sprint Estado de avance Publicación Release) La propiedad Tipo == null Tareas Resumen Fecha de Fin Fecha de Inicio Missed Deadline Tipo de documento"
+  },
+  {
+    "Nro Regla": 21,
+    "Nombre": "La Tarea no tiene definido un titulo especifico",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tarea == “Historia de usuario || Tarea == “Análisis Funcional || Tarea == “Diseño || Tarea == “Análisis Técnico || Tarea == “Manual de Usuario || Tarea == “Manual de Instalación || Tarea == “Manual Técnico || Tarea == “Release Notes || Tarea == “Desarrollo || Tarea == “Pruebas || Tarea == “Entregable || Tarea == “Error || Tarea == “Soporte || Tarea == “Solicitud || Tarea == “"
+  },
+  {
+    "Nro Regla": 22,
+    "Nombre": "La Tarea no tiene Fecha de Recepción definida",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Fecha de Recepción == null"
+  },
+  {
+    "Nro Regla": 23,
+    "Nombre": "La Tarea no tiene un Tipo definido",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == null"
+  },
+  {
+    "Nro Regla": 24,
+    "Nombre": "La Tarea no tiene definido un responsable",
+    "Base": "Tareas",
+    "Estado": "Todos los estados a excepción de “Sin empezar",
+    "Validación": "La propiedad Responsable == null"
+  },
+  {
+    "Nro Regla": 25,
+    "Nombre": "La Tarea no tiene definida una prioridad",
+    "Base": "Tareas",
+    "Estado": "Todos los estados a excepción de “Sin empezar",
+    "Validación": "La propiedad Prioridad == null"
+  },
+  {
+    "Nro Regla": 26,
+    "Nombre": "La Tarea no tiene definido un esfuerzo",
+    "Base": "Tareas",
+    "Estado": "Todos los estados a excepción de “Sin empezar y “Cancelada",
+    "Validación": "La propiedad Esfuerzo == null"
+  },
+  {
+    "Nro Regla": 27,
+    "Nombre": "La Tarea no tiene definida una Fecha Limite",
+    "Base": "Tareas",
+    "Estado": "Todos los estados a excepción de “Sin empezar y “Cancelada",
+    "Validación": "La propiedad Fecha Limite == null"
+  },
+  {
+    "Nro Regla": 28,
+    "Nombre": "La Tarea no tiene definido un Sprint",
+    "Base": "Tareas",
+    "Estado": "Todos los estados a excepción de “Sin empezar",
+    "Validación": "La propiedad Sprint == null"
+  },
+  {
+    "Nro Regla": 29,
+    "Nombre": "La Tarea no tiene una Fecha de Fin definida",
+    "Base": "Tareas",
+    "Estado": "“Completada",
+    "Validación": "La propiedad Fecha de Fin == null"
+  },
+  {
+    "Nro Regla": 30,
+    "Nombre": "La Tarea no tiene una Fecha de Inicio definida",
+    "Base": "Tareas",
+    "Estado": "Todos los estados a excepción de “Sin empezar",
+    "Validación": "La propiedad Fecha de Inicio == null"
+  },
+  {
+    "Nro Regla": 31,
+    "Nombre": "La Tarea no tiene definido un Tipo de Documento",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo de Documento == null"
+  },
+  {
+    "Nro Regla": 32,
+    "Nombre": "La Tarea de tipo Historia de usuario no tiene sub Tareas definidas",
+    "Base": "Tareas",
+    "Estado": "“en curso, “en revisión, “Completada",
+    "Validación": "La propiedad de Tipo == “Historia de usuario && La propiedad Subtareas == null"
+  },
+  {
+    "Nro Regla": 33,
+    "Nombre": "La Tarea de Tipo Solicitud no tiene Sub Tareas definidas",
+    "Base": "Tareas",
+    "Estado": "“en curso, “en revisión, “Completada",
+    "Validación": "La propiedad Tipo == “Solicitud && La propiedad Subtareas == null"
+  },
+  {
+    "Nro Regla": 34,
+    "Nombre": "La Tarea de Tipo Incidencia no tiene Sub Tareas definidas",
+    "Base": "Tareas",
+    "Estado": "“en curso, “en revisión, “Completada",
+    "Validación": "La propiedad Tipo == “Incidencia && La propiedad Subtareas == null"
+  },
+  {
+    "Nro Regla": 35,
+    "Nombre": "La Tarea no tiene un tipo asignado",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == null"
+  },
+  {
+    "Nro Regla": 36,
+    "Nombre": "La Tarea de tipo Historia de usuario no tiene un Requerimiento asociado",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Historia de usuario && La propiedad Requerimiento == null"
+  },
+  {
+    "Nro Regla": 37,
+    "Nombre": "La Tarea de tipo Análisis Funcional no tiene Requerimiento asociado o Historia de usuario asociada",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad de Tipo == “Analisis && Tipo de documento == “Analisis Funcional && Requerimiento == null && Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 38,
+    "Nombre": "La Tarea de tipo entregable no tiene Publicación Asignada",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad de Tipo == “Entregable && Publicación == null"
+  },
+  {
+    "Nro Regla": 39,
+    "Nombre": "La Tarea de tipo Diseño no tiene Requerimiento asociado o Historia de usuario asociada",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad de Tipo == “Diseño && Tipo de documento == “Diseño && Requerimiento == null && Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 40,
+    "Nombre": "La Tarea de tipo Documentación no tiene Requerimiento asociado o Historia de usuario asociada",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad de Tipo == “Documentación && Tipo de documentación == “Documentación && Requerimiento == null && Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 41,
+    "Nombre": "La Tarea de tipo error no puede estar definida como Tarea Principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Error && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 42,
+    "Nombre": "La Tarea de tipo Análisis no puede estar definida como tarea principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Analisis && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 43,
+    "Nombre": "La Tarea de tipo Diseño no puede estar definida como tarea principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Diseño && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 44,
+    "Nombre": "La Tarea de tipo Desarrollo no puede estar definida como tarea principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Desarrollo && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 45,
+    "Nombre": "La Tarea de tipo Documentación no puede estar definida como tarea principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Documentación && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 46,
+    "Nombre": "La Tarea de tipo Prueba no puede estar definida como tarea principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Prueba && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 47,
+    "Nombre": "La Tarea de tipo Entregable no puede estar definida como tarea principal",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Entregable && La propiedad Tarea Principal == null"
+  },
+  {
+    "Nro Regla": 48,
+    "Nombre": "La Tarea de tipo Incidencia no puede ser una sub tarea",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Incidencia && La propiedad Tarea Principal <> null"
+  },
+  {
+    "Nro Regla": 49,
+    "Nombre": "La Tarea de tipo Solicitud no puede ser una sub tarea",
+    "Base": "Tareas",
+    "Estado": "Todos los estados",
+    "Validación": "La propiedad Tipo == “Solicitud && La propiedad Tarea Principal <> null"
+  },
+  {
+    "Nro Regla": 50,
+    "Nombre": "La Tarea está en estado “completada con Subtareas con estados distintos a “Completada",
+    "Base": "Tareas",
+    "Estado": "“Completada",
+    "Validación": "La propiedad Estado == Completada && Estado de avance == 100%"
+  },
+  {
+    "Nro Regla": 51,
+    "Nombre": "La Tarea no está en estado Completada, pero sus subtareas están todas en estado “Completada",
+    "Base": "Tareas",
+    "Estado": "“En curso, “Sin empezar",
+    "Validación": "La propiedad estado <> Completada && Estado de avance == 100%"
+  },
+  {
+    "Nro Regla": 52,
+    "Nombre": "La Tarea no puede tener la propiedad de fecha fin sin que el estado no sea Completada",
+    "Base": "Tareas",
+    "Estado": "“En curso, “Sin empezar",
+    "Validación": "La propiedad estado <> Completada && Fecha Fin <> null"
+  },
+  {
+    "Nro Regla": 53,
+    "Nombre": "La Tarea no puede tener fecha de inicio si está en estado Sin Empezar",
+    "Base": "Tareas",
+    "Estado": "“Sin Empezar",
+    "Validación": "La propiedad estado == “Sin Empezar && Fecha inicio <> null"
+  }
+]
